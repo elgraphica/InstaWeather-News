@@ -21,7 +21,7 @@
 
   <!--NavBar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light customNav">
-    <a class="navbar-brand" href="#">Welcome<span> to Your New Evenet</span></a>
+    <a class="navbar-brand" href="#">InstaWeather<span> & News</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,13 +36,13 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">More</a>
+            aria-haspopup="true" aria-expanded="false">News</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="about">Outdoors</a>
+            <a class="dropdown-item" href="about">Sports</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Indoors</a>
+            <a class="dropdown-item" href="#">Business</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Contact Us</a>
+            <a class="dropdown-item" href="#">Local</a>
           </div>
         </li>
         <li class="nav-item">
@@ -53,24 +53,24 @@
   </nav>
 <!--Jumbotron-->
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+      <div id="results">
+        <section id="today" class="mt-3" role="region" aria-live="polite">
+        </section>
+        <section id="today-news" class="mt-3" role="region" aria-live="polite">
+        </section>
+      </div>
+        <div class="container" id="results-container">
           <div class="city">
             <div class="weather-container mt-3" id="weatherContainer">
-              <section id="today" class="mt-3" role="region" aria-live="polite">
-              </section>
-              <section id="today-news" class="mt-3" role="region" aria-live="polite">
-              </section>
-              <!-- Weather information will be displayed here -->
             </div>
             <h1 class="display-4" id="cityLast"></h1>
           <form id="search-form">
             <div class="form-group">
               <input type="text" class="form-control" id="cityInput" placeholder="Enter your city">
-              <input type="submit" name="submit" value="Search">
+              <input type="submit" name="submit" value="Search" id="search-button">
             </div>
           </form>
-        </div>
-          
+        </div>   
         </div>
       </div>
       

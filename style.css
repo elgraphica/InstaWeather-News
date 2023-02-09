@@ -75,7 +75,6 @@ span {
 
 .jumbotron {
     background-size: cover;
-    /* background-image: url(../imgs/dayoff2.png); */
     height: calc(100vh - 70px);
     display: flex;
     align-items: flex-start;
@@ -83,8 +82,8 @@ span {
   }
 
   .container {
-    margin-top: 300px;
-    margin-left: 100px;
+    margin-top: 600px;
+    margin-left: -1800px;
   }
 
   .city form {
@@ -119,11 +118,19 @@ span {
   color: rgb(64, 59, 77);
 }
 
+#results {
+  height: 500px;
+  width: 100%;
+  margin-top: 10px;
+}
+
 #today {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  float: left;
+  width: 40%;
 }
 
 #today h1 {
@@ -141,16 +148,30 @@ span {
   text-align: center;
 }
 
-  section {
-    display: flex;
-    flex-direction: column;
+#today-news {
+  height: 82vh;
+  overflow: auto;
 }
-.leftbox {
-    display: flex;
-    align-items: flex-end;
-    width: 50%;
+
+@media only screen and (max-width: 767px) {
+  /* styles for screens with a maximum width of 767px */
+  /* For example, you can change the font size or hide elements */
+  body {
+      font-size: 14px;
+  }
+
+  .navbar {
+      display: none;
+  }
 }
-.events {
-    margin-top: 20px;
-    width: 50%;
+
+@media only screen and (max-width: 767px) {
+  .city form {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #search-form {
+    width: 100%;
+  }
 }

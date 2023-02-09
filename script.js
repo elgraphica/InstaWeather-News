@@ -1,8 +1,6 @@
 let apiKey = '996513822471b1a94113e31bc557ef81';
-// let history = localStorage.getItem('search') || [];
+let history = localStorage.getItem('search') || [];
 const userInput = $('#search-input').val();
-
-$('#cityLast').text(history[0].toUpperCase())
 
 
 
@@ -50,7 +48,6 @@ $('#search-form').on('submit', function(event) {
         const humidity = today.main.humidity;
   
         $('#today').html(`
-        <h1 class=>${cityName}</h1>
         <p class="lead">${formattedDate}</p>
         <img src="${iconUrl}" alt="Weather Icon">
         <p class="lead">${weatherDescription}</p>
@@ -70,8 +67,8 @@ const newsContent = newsResponse.articles[0].content;
 const newsUrl = newsResponse.articles[0].url;
 const newsImage = newsResponse.articles[0].image;
         
-// let history = localStorage.getItem('search') || [];
-$('#cityLast').text(history[0].toUpperCase())  
+let history = localStorage.getItem('search') || [];
+$('#cityLast').text(history[0].toUpperCase() + history.slice(1, history.length));
 
         $('#today-news').html(`
         <h1 class=>${newsTitle}</h1>
