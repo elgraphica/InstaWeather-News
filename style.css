@@ -81,9 +81,11 @@ span {
     justify-content: flex-start;
   }
 
-  .container {
-    margin-top: 600px;
-    margin-left: -1800px;
+  .city {
+    height: 100vh;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 10px;
   }
 
   .city form {
@@ -120,8 +122,9 @@ span {
 
 #results {
   height: 500px;
-  width: 100%;
+  width: 80%;
   margin-top: 10px;
+  display: flex;
 }
 
 #today {
@@ -129,18 +132,7 @@ span {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  float: left;
-  width: 40%;
-}
-
-#today h1 {
-  flex-basis: 20%;
-  text-align: center;
-}
-
-#today img {
-  flex-basis: 20%;
-  margin: 0 10px;
+  width: 100%;
 }
 
 #today p {
@@ -149,19 +141,14 @@ span {
 }
 
 #today-news {
-  height: 82vh;
+  height: 80vh;
   overflow: auto;
+  width: 100%;
 }
 
 @media only screen and (max-width: 767px) {
-  /* styles for screens with a maximum width of 767px */
-  /* For example, you can change the font size or hide elements */
   body {
       font-size: 14px;
-  }
-
-  .navbar {
-      display: none;
   }
 }
 
@@ -173,5 +160,23 @@ span {
 @media screen and (max-width: 600px) {
   #search-form {
     width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 24px;
+  }
+  .lead {
+    font-size: 18px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-brand {
+    font-size: 14px;
   }
 }
