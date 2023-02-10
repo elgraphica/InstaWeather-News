@@ -11,7 +11,8 @@ Whether you’re planning your day, traveling to a new city, or simply want to s
 
 ## Screenshots of project
 
-![Screenshot]()
+![Screenshot](imgs/Screenshot%202023-02-10%20at%2018.57.21.png)
+![Screenshot](imgs/Screenshot%202023-02-10%20at%2018.56.57.png)
 
 ## Deployed Web Application and Presentation
 
