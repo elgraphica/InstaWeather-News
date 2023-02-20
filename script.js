@@ -17,12 +17,9 @@ $('#search-form').on('submit', function(event) {
   
     $.ajax({ url: queryUrl })
     .then(function(response) {
-      console.log(response);
   
       const lat = response[0].lat;
       const lon = response[0].lon;
-  
-      console.log(lat, lon);
   
       const weatherQueryUrl = 'https://api.openweathermap.org/data/2.5/forecast?units=metric&lat=' + lat + '&lon=' + lon + '&appid=' + apiKey
       const news = `https://gnews.io/api/v4/search?apikey=d637a83839fdfa02561aecd225796c43&q=${userInput}`
@@ -31,7 +28,6 @@ $('#search-form').on('submit', function(event) {
       $.ajax({ url: weatherQueryUrl })
       .then(function(weatherResponse) {
         //Icon URL --> "https://openweathermap.org/img/w/" + iconcode + ".png"
-        console.log(weatherResponse);
   
         const weatherList = weatherResponse.list;
   
@@ -59,7 +55,7 @@ $('#search-form').on('submit', function(event) {
       }).then(res=>{
       $.ajax( news )
       .then(function(newsResponse) {
-console.log(newsResponse.articles[0])
+
 
 const newsTitle = newsResponse.articles[0].title;
 const newsDescreption = newsResponse.articles[0].description;
